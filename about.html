@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CHEF ISMAEL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/jpg" href="logo.jpg">
+  <style>
+    /* body style */
+    body {
+  font: 400 15px Lato;
+  line-height: 1.8;
+  color: #818181;
+}
+    /*jumbotron style*/
+      .jumbotron 
+      {
+          background-color: #ade3e7; 
+          color: #04080a;
+          padding: 100px 25px;
+        }
+        /*company details style*/
+        bg-grey
+         {
+  background-color: #f6f6f6;
+         }
+         .container-fluid 
+         {
+  padding: 60px 50px; /*seperates the contents at specified margin*/
+         }
+         .logo {
+  font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+/* color for all icons and their font-size */
+.logo-small {
+  color: #ece8e7;
+  font-size: 50px;
+}
+
+.logo {
+  color: #f7f0ee;
+  font-size: 200px;
+}
+/* portfolio styling */
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
+}
+
+.thumbnail img {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+/* styling the customer  responses*/
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: #f5f0ee;
+}
+
+.carousel-indicators li {
+  border-color: #f0ebea;
+}
+
+.carousel-indicators li.active {
+  background-color: #e9e3e2;
+}
+
+.item h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 400;
+  font-style: italic;
+  margin: 70px 0;
+}
+
+.item span {
+  font-style: normal;
+}
+/* styling the navigation bar */
+.navbar {
+  margin-bottom: 0;
+  background-color: #e3f2f8;
+  z-index: 9999;
+  border: 0;
+  font-size: 20px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #110f0f !important;
+}
+/* When scrolling */
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #f5aca7 !important;
+  background-color: #0c0c0c !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+/* footer styling */
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #f4511e;
+}
+/* Footer styles */
+footer {
+  background-color: #f9f9f9;
+  padding: 20px 0;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-block {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.slideanim {visibility:hidden;}
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+/* Slide animation */
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  right: 20px; /* Adjust the distance from the right as needed */
+  z-index: 9999; /* Ensure it appears above other elements */
+}
+
+.whatsapp-icon img {
+  width: 100px; /* Adjust the icon size as needed */
+  height: auto;
+  border-radius: 20px;
+}
+  </style>
+</head>
+   <!--This is Jumbotron, a big box-->
+<div class="jumbotron text-center">
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--Navigation bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#myPage"><img src="logo.jpg" width="50px" height="40px" style="border-radius:50%;"></image></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Body-->
+   <h1>Chef Ismael Isa Catering Company</h1>
+<p>Where food celebrates life</p>
+<form class="form-inline">
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger"><a href="https://api.whatsapp.com/send?phone=+254757909044&text=Hello Chef Ismael Isa">Subscribe</a></button>
+      </div>
+    </div>
+  </form>
+  <!--About-->
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>Chef Ismael ISa</h2>
+        <h4>Chef Ismael Isa Catering company</h4>
+        <p style="text-align:justify;">Chef Ishmael Isa is a catering company that aims at providing satisfaction by serving high-quality delicious food. We are top-ranked by most of our customers who recognize us as the top cooks with very unique flavors that just make your weddings functions, Roracios, birthday parties, and luncheons just the best. Our primary goal is to exceed customer expectations by consistently delivering a diverse range of delectable dishes crafted with utmost care and using only the finest, top-notch ingredients. We strive to create an extraordinary dining experience where our patrons can indulge in a delightful gastronomic journey, savoring each bite of our exquisitely prepared and flavorsome culinary creations. Our commitment to excellence extends beyond taste, as we meticulously present our dishes, paying attention to every detail, ensuring a feast for both the eyes and the palate. Customer satisfaction is at the heart of everything we do, and we take immense pride in providing exceptional service and a warm, welcoming ambiance to accompany our high-quality, delicious food</p>
+        <button class="btn btn-default btn-lg">
+          <a href="https://api.whatsapp.com/send?phone=+254714318953&text=Hello Chef Ismael Isa">
+            Get In Touch
+        </a>
+      </button>
+    </div>
+      <div class="col-sm-4">
+        <span><image src="pic 3.jpg" width="80%" height="30%"></image></span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+       <span></span>
+      </div>
+      <div class="col-sm-8">
+        <h2><strong>Our Values</strong></h2>
+        <p><strong>Satisfaction:</strong> Fulfilling the needs and ensuring the quality of service to the expectations of our customers and beyond.</p>
+        <p><strong>Excellence:</strong> Strive for the highest quality  food in every aspect of our recipies.</p>
+        <p><strong>Integrity:</strong> Conduct business with honesty, transparency, and ethical practices to ensure that our customers are fully satisfied.</p>
+        <h4><strong>MISSION:</strong></h4>
+        <p style="text-align: justify;">
+          We aim to make our customers happy by serving them delicious food made with top-notch ingredients. Our goal is to provide a diverse menu of tasty dishes that are prepared with care and attention to detail, ensuring customer satisfaction.
+        </p>
+        <p><strong>VISION:</strong></p>
+        <p style="text-align: justify;">
+          We strive to establish ourselves as the leading caterers in the industry, renowned and highly regarded for our exceptional services, innovative culinary offerings, and the ability to deliver distinctive and unparalleled flavors that leave a lasting impression on our valued customers.
+        </p>
+      </div>
+    </div>
+  </div>
+ <!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+    <h2>SERVICES</h2>
+    <h4>What we offer</h4>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-tasks"> <strong>MENU</strong></span>
+        <h4>Menu planning</h4>
+        <p style="text-align: justify;"> Our team works closely with you to design personalized menus that perfectly align with your preferences, dietary requirements, and event theme. We take pride in crafting delectable dishes that leave a lasting impression on your guests.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-cutlery"> <strong>PREPARATION</strong></span>
+        <h4>Food Preaprations</h4>
+        <p style="text-align: justify;">At Chef Ismael Isa Catering, we emphasize the use of high-quality ingredients and impeccable food preparation techniques. Our skilled chefs are dedicated to creating flavors that delight the taste buds and exceed your expectations.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-th"> <strong>PRESENTATION</strong></span>
+        <h4>Artful Food Presentation</h4>
+        <p style="text-align: justify;">We believe that presentation is key to enhancing your dining experience. Our talented culinary artists meticulously arrange platters, garnish dishes, and create captivating food displays that are as visually appealing as they are delicious</p>
+      </div>
+      </div>
+      <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-leaf"><strong> EXCELLENCE</strong></span>
+        <h4>Priotizing Excellence</h4>
+        <p style="text-align: justify;">We strive for excellence in all we do. From food prep to customer service, we deliver exceptional experiences, exceeding expectations and creating lasting memories</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-certificate"> <strong>CERTIFIED</strong></span>
+        <h4>Trained and Attentive Staff</h4>
+        <p style="text-align: justify;">Our team of dedicated professionals goes the extra mile to ensure that your event runs seamlessly. From skilled chefs to attentive waitstaff, our staff members are committed to providing exceptional service and ensuring that your guests feel well taken care of.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-wrench"><strong> DELIVERY</strong></span>
+        <h4>HARD WORK</h4>
+        <p style="text-align: justify;">At Chef Ismael Isa Catering, we work hard to deliver excellence. From delicious food to outstanding service, our dedication ensures unforgettable events.</p>
+      </div>
+    </div>
+  </div>
+  <!--Company's portfolio-->
+  <div id="portfolio" class="container-fluid text-center bg-grey">
+    <h2>Portfolio</h2>
+    <h4>What we Cook</h4>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="pic 16.jpg" alt="Snacks">
+          <p><strong><a href="Snacks.html">Snacks</a></strong></p>
+          <p>Snacks for you</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+           <img src="pic 15.jpg" alt="Chicken">
+           <p><strong><a href="Salads.html" target="_blank">Salads</a></strong></p>
+           <p>Salads</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="pic 14.jpg" alt="Pilau">
+          <p><strong><a href="recipies.html">Any kind of food</a></strong></p>
+          <p>Very Tasty</p>
+        </div>
+      </div>
+      <h2>What our customers say</h2>
+      <div class="slideanim">
+<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+    </div>
+    <div class="item">
+      <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+    </div>
+    <div class="item">
+      <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+    </div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  </div>
+</div>
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact us and we'll get back to you.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Nairobi, Kenya</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +254 714 318953</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:chefismaelisacateringcompany@gmail.com">Email</a></p>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container-fluid text-center">
+    <div class="footer">
+      <div class="flex-container">
+        <div class="text-block">
+          <p style="font-size: 30px;">Consider us for:</p>
+          <ul style="text-align: center;">
+            <li>Wedding functions.</li>
+            <li>Dowry payment.</li>
+            <li>Office Luncheon.</li>
+            <li>Corporate Functions.</li>
+            <li>Unveiling.</li>
+          </ul>
+        </div>
+        <div class="text-block">
+          <p>Useful Links</p>
+          <ul style="list-style-type: disc;">
+            <li><a href="register.html">REGISTER</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    <a href="#myPage" title="To Top">
+      <span> Back to top</span>
+    </a>
+    <p>Developed by <a href="mailto:abrahammwatheka@gmail.com" title="Developer">Mwatheka John</a></p>
+    <p style="text-align: center;">&copy;2023. All rights reserved.</p>
+</div>
+</div>
+</footer>
+  <a href="https://api.whatsapp.com/send?phone=+254714318953&text=Hello Chef Ismael Isa" class="whatsapp-icon">
+    <img src="whatsapp.jpg" alt="WhatsApp Icon">
+  </a>
+<script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  
+     // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+  
+      // Prevent default anchor click behavior
+      event.preventDefault();
+  
+      // Store hash
+      var hash = this.hash;
+  
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+  
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+        });
+      } // End if
+    });
+  })
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+  
+      var winTop = $(window).scrollTop();
+      if (pos < winTop + 600) {
+        $(this).addClass("slide");
+      }
+    });
+  });
+  </script>
+    </body>
+  </html>
